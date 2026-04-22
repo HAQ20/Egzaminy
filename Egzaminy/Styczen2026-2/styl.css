@@ -1,0 +1,19 @@
+body{
+    font-family: Georgia, sans-serif;
+}
+
+nav,
+footer{
+    background-color: forestgreen;
+    color: white;
+    margin: 2px;
+    text-align: center;
+}
+
+.boczny,
+section{
+    background-color: Khaki;
+    width: 50%;
+    height: 400px;
+    flex: auto;
+}

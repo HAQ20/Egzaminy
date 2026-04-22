@@ -2,12 +2,24 @@ body{
     font-family: Georgia, sans-serif;
 }
 
-nav,
+header,
 footer{
     background-color: forestgreen;
     color: white;
-    margin: 2px;
+    padding: 2px;
     text-align: center;
+}
+
+nav{
+    background-color: darkkhaki;
+    height: 150px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.content{
+    display: flex;
 }
 
 .boczny,
@@ -15,5 +27,16 @@ section{
     background-color: Khaki;
     width: 50%;
     height: 400px;
-    flex: auto;
+}
+
+.boczny img{
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid forestgreen;
+    border-style: dotted;
+    border-radius: 40px;
+}
+section p{
+    font-size: 120%;
+    font-style: italic;
 }

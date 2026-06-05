@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fotografia artystyczna</h1>
+    </header>
+    <section class="obrazy">
+        <img src="pliki/1.jpg" alt="obrazy do sprzedaży" title="1.jpg">
+        <img src="pliki/2.jpg" alt="obrazy do sprzedaży" title="2.jpg">
+        <img src="pliki/3.jpg" alt="obrazy do sprzedaży" title="3.jpg">
+        <img src="pliki/4.jpg" alt="obrazy do sprzedaży" title="4.jpg">
+        <img src="pliki/5.jpg" alt="obrazy do sprzedaży" title="5.jpg">
+        <img src="pliki/6.jpg" alt="obrazy do sprzedaży" title="6.jpg">
+        <img src="pliki/7.jpg" alt="obrazy do sprzedaży" title="7.jpg">
+        <img src="pliki/8.jpg" alt="obrazy do sprzedaży" title="8.jpg">
+        <img src="pliki/9.jpg" alt="obrazy do sprzedaży" title="9.jpg">
+        <img src="pliki/10.jpg" alt="obrazy do sprzedaży" title="10.jpg">
+    </section>
+    <main>
+        <section class="left">
+            <h3>Zamówienie</h3>
+            <label for="plik">Wybierz obraz: </label>
+            <input type="file" name="plik" id="plik" accept=".jpg"><br>
+            <label for="numer">Liczba Kopii: </label>
+            <input type="number" name="numer" id="numer"><br>
+            <input type="radio" name="rodzaj" value="1.5" checked>Papier błyszczący <br>
+            <input type="radio" name="rodzaj" value="2">Papier matowy 
+            <br>
+            <button onclick="oblicz()">Dodaj do koszyka</button>
+            <script>
+                function oblicz(){
+                    let plik = document.getElementById('plik');
+                    let liczba_k = document.getElementById('numer').value;
+                    let rodzaj = document.querySelector('input[name="rodzaj"]:checked').value;
+                    let scriptbox = document.querySelector('.scriptbox');
+                    let cena = parseInt(liczba_k) * parseFloat(rodzaj);
+                    let img = document.createElement('img');
+                    let liczba_text = document.createElement('p');
+                    let cena_text = document.createElement('p');
+                    liczba_text.textContent = `Liczba kopii: ${liczba_k}`;
+                    cena_text.textContent = `Cena: ${cena}`;
+                    img.src = `pliki/${plik.files[0].name}`;
+                    scriptbox.appendChild(img);
+                    scriptbox.appendChild(liczba_text);
+                    scriptbox.appendChild(cena_text);
+                }
+            </script>
+        </section>
+        <div class="flexbox">
+        <nav>
+            <ul>
+                <li><a href="regulamin.html">Regulamin</a></li>
+                <li><a href="uslugi.html">Usługi</a></li>
+                <li><a href="https://pixabay.com">Zdjęcia</a></li>
+            </ul>
+        </nav>
+        <section class="right">
+            <h3>Koszyk</h3>
+            <div class="scriptbox"></div>
+        </section>
+        </div>
+    </main>
+    <footer><p>Autor strony: <em>HAQ</em></p></footer>
+</body>
+</html>

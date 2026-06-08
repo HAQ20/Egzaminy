@@ -1,0 +1,67 @@
+*{
+    font-family: Roboto, Arial, sans-serif;
+    text-align: center;
+}
+
+body{
+    background-color: lightblue;
+}
+
+main{
+    display: flex;
+}
+
+header, footer{
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+}
+
+article{
+    padding-top: 40px;
+    margin: 1%;
+}
+
+@media (min-width: 800px){
+    article{
+        flex-direction: row;
+        width: 30%;
+    }
+}
+@media (max-width: 800px){
+    article{
+        flex-direction: column;
+        width: 98%;
+    }
+}
+
+article:nth-child(1){
+    background-color: dodgerblue;
+}
+article:nth-child(2){
+    background-color: limegreen;
+}
+article:nth-child(3){
+    background-color: darkorchid;
+}
+
+img{
+    width: 70%;
+}
+
+p{
+    padding: 20px;
+}
+
+
+table{
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    border: 1px solid steelblue;
+}
+tr:hover{
+    background-color: steelblue;
+    color: white;
+}
+

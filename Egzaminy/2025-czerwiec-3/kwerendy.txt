@@ -1,0 +1,4 @@
+SELECT nazwisko, imie, klasa, data_wypozyczenia FROM `uczniowie` WHERE DATEDIFF(data_wypozyczenia, "2020-03-02") > 0;
+SELECT nazwisko, imie, data_wypozyczenia, ksiazki.autor, ksiazki.kod FROM `uczniowie` JOIN ksiazki ON ksiazki.id = uczniowie.id_ksiazki;
+DELETE FROM ksiazki WHERE autor = '0';
+SELECT autor, kod, tytul FROM `ksiazki` ORDER BY rand() LIMIT 5;

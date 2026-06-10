@@ -1,0 +1,4 @@
+SELECT COUNT(DISTINCT(Id)) FROM `klienci` WHERE 1;
+SELECT Nazwisko, Imie, z.id, z.kod_koloru, z.pojemnosc, z.data_odbioru FROM `klienci` JOIN zamowienia z ON z.id_klienta = klienci.Id ORDER BY z.data_odbioru ASC;
+SELECT Nazwisko, Imie, z.id, z.kod_koloru, z.pojemnosc, z.data_odbioru FROM `klienci` JOIN zamowienia z ON z.id_klienta = klienci.Id WHERE z.data_odbioru BETWEEN "2021-11-5" AND "2021-11-07" ORDER BY z.data_odbioru ASC;
+SELECT Imie, Nazwisko FROM `klienci` WHERE Imie LIKE '%a';
